@@ -1,0 +1,16 @@
+{% extends 'partials/main.html' %}
+{% load static %}
+
+{% block title %} Rate More {% endblock %}
+{% block content %}
+    <div class=" h3 text-center pt-5">
+        <p> Thanks for rating more videos </p>
+        <br>
+        <em>
+            Instructions remain as before.
+        </em>
+        <br>
+        <br>
+    <a type="button" href="/survey/{{ rate_param }}/" class="btn btn-primary">Start Survey</a>
+    </div>
+{% endblock %}

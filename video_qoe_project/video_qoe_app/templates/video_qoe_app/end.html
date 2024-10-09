@@ -1,0 +1,17 @@
+{% extends 'partials/main.html' %}
+{% load static %}
+
+{% block title %} End {% endblock %}
+{% block content %}
+<div class=" h3 text-center pt-5">
+    <p> Thanks for taking the survey </p>
+    <br>
+    <em>Will you like to help us rate more videos?</em>
+    <form action="/end/{{ resp_param }}/" method="POST" id="endForm_id">
+         {% csrf_token %}
+        <button type="submit" name="more_rating" class="btn btn-primary endForm_class" form="endForm_id" value="Yes">Yes, I will love to</button>
+        <button type="submit" name="more_rating" class="btn btn-primary endForm_class" form="endForm_id" value="No">No, I'm done.</button>
+    </form>
+</div>
+{% endblock %}
+
