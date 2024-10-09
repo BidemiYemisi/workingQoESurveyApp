@@ -1,0 +1,45 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    URL FOR HOW TO ADD STATIC FILES https://www.youtube.com/watch?v=empnQcWr1jE-->
+    <meta charset="UTF-8"/>
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'image/favicon-32x32.png' %}">
+</head>
+
+<body style="opacity: 0">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-success text-uppercase navbar-static-top">
+    <div class="container">
+        <a href="{% url 'welcome' %}" class="navbar-brand text-white pb-0">Video QoE Subjective Survey</a>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+
+<footer class="bg-light text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-dark" href="{% url 'welcome' %}">Video QoE Subjective Survey</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<script type="text/javascript" src="{% static 'js/jquery-3.7.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/myjs.js' %}"></script>
+<style>
+        body {
+            opacity: 1 !important;
+        }
+    </style>
+</body>
+</html>
